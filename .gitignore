@@ -1,6 +1,12 @@
 # Dependency directories
 node_modules/
 
+# Build files
+client/dist/bundle.*
+
 # dotenv environment variables file
 .env
 .env.test
+
+# Other
+package-lock.json
