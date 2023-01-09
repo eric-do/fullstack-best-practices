@@ -8,7 +8,7 @@ If the project is complex, a good way to organize code is _by feature_.
 
 ## Frontend
 
-The frontend code can be structured similar to:
+The frontend code is in a `client` folder, and can be structured as:
 
 ```sh
 src
@@ -94,3 +94,23 @@ Any global Providers for React Contexts would be put here.
 ### test
 
 Utilities for testing should be put here. A common one is a mock server, for instance provided by `msw`.
+
+## Backend
+
+The backend code is in a `server` folder, and can be structured as:
+
+```sh
++-- controllers
+|
++-- models
+|
++-- middleware
+|
++-- routes
+|
++-- utils
+|
++-- app.js          # separation allows for testing of Express app
+|
++-- index.js        # server connection logic
+```
