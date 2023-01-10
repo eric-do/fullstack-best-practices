@@ -12,7 +12,7 @@ Not suggested during Hack Reactor, but a good tool for automatically formatting 
 
 #### Absolute imports
 
-Absolute imports can be configured and used with aliases. This helps reference files without using messy relative imports.
+Absolute imports can be configured and used with aliases. Absolute imports makes it easier to find files. It also makes it so imports are not broken when the file is moved.
 
 Instead of:
 

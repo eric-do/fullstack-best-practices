@@ -1,8 +1,11 @@
 import React from 'react';
+import MoviesList from '~/features/MoviesList';
 
 function App() {
   return (
-    <div>Hello from App</div>
+    <div>
+      <MoviesList />
+    </div>
   );
 }
 
