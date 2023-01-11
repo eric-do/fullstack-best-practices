@@ -8,7 +8,9 @@ function MovieEntry({ movie }) {
 }
 
 MovieEntry.propTypes = {
-  movie: PropTypes.string.isRequired,
+  movie: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default MovieEntry;

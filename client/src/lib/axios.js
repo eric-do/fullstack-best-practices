@@ -10,4 +10,7 @@ axios.interceptors.response.use(
   (error) => Promise.reject(error),
 );
 
+// This doesn't work as intended. See https://github.com/axios/axios/issues/362
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+
 export default axios;

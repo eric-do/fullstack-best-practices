@@ -6,26 +6,30 @@ function useGetMovies() {
   const [error, setError] = useState(null);
   const [isPending, setPending] = useState(false);
 
+  const getMovies = async () => {
+    try {
+      setError(null);
+      setPending(true);
+
+      const updatedMovies = await axios.get('/movies');
+      setMovies(updatedMovies);
+      setPending(false);
+    } catch (err) {
+      setError(err);
+      setPending(false);
+    }
+  };
+
   useEffect(() => {
-    const getMovies = async () => {
-      try {
-        setError(null);
-        setPending(true);
-
-        const updatedMovies = await axios.get('/movies');
-
-        setMovies(updatedMovies);
-        setPending(false);
-      } catch (err) {
-        setError(err);
-        setPending(false);
-      }
-    };
-
     getMovies();
   }, []);
 
-  return { movies, error, isPending };
+  return {
+    movies,
+    error,
+    isPending,
+    getMovies,
+  };
 }
 
 export default useGetMovies;
