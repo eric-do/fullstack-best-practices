@@ -7,6 +7,12 @@ export const movieForm = {
       label: 'Title',
       type: 'text',
     },
+    director: {
+      id: 'movie-director',
+      name: 'director',
+      label: 'Director',
+      type: 'text',
+    },
   },
   submit: {},
 };
