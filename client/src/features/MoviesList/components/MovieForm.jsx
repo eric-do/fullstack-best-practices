@@ -1,33 +1,16 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import Form from '~/components/Form';
 import useAddMovie from '../api/useAddMovie';
+import { movieForm } from '../utils/formConfig';
 
-function MovieForm({ onSubmit }) {
-  const [title, setTitle] = useState('');
-
+function MovieForm() {
   const { addMovie } = useAddMovie();
 
-  const handleTitle = (e) => setTitle(e.target.value);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    await addMovie({ title });
-    onSubmit();
-  };
+  movieForm.submit.onSubmit = addMovie;
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        value={title}
-        onChange={handleTitle}
-      />
-    </form>
+    <Form form={movieForm} />
   );
 }
-
-MovieForm.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
 
 export default MovieForm;
