@@ -1,6 +1,5 @@
-// Generic form component
-// Takes inputs as arguments
-// Returns a list of form inputs
+// I: a list of input fields and their respective properties
+// O: a) a function to render the fields, b) the input state
 
 import React, { useState, useCallback } from 'react';
 import InputField from '~/components/InputField';

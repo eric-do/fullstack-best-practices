@@ -28,4 +28,4 @@ This repo seeks to advance understanding beyond the curriculum in areas such as:
 - [⚙️ Project Configuration](docs/project-configuration.md)
 - [🗄️ Project Structure](docs/project-structure.md)
 - [🌐 API Layer](docs/api-layer.md)
-- [⚛ React Components](docs/api-layer.md)
+- [⚛ Components and hooks](docs/api-layer.md)

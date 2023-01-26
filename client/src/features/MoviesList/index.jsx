@@ -8,12 +8,11 @@ function MoviesList() {
     movies,
     error,
     isPending,
-    getMovies,
   } = useGetMovies();
 
   return (
     <div>
-      <MovieForm onSubmit={getMovies} />
+      <MovieForm />
       { error && <div>There was an error </div> }
       { isPending && <div>Making request</div> }
       {

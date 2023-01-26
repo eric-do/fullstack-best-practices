@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import useForm from '~/hooks/useForm';
+import SubmitButton from './SubmitButton';
 
 function GenericForm({ form: { inputs, title }, onSubmit }) {
   const { renderFormInputs, form } = useForm(inputs);
@@ -20,9 +21,7 @@ function GenericForm({ form: { inputs, title }, onSubmit }) {
     <form className="generic-form" onSubmit={handleSubmit}>
       <h1>{ title }</h1>
       { renderFormInputs() }
-      <button type="submit">
-        Submit
-      </button>
+      <SubmitButton />
     </form>
   );
 }
