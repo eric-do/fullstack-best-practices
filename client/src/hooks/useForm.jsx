@@ -32,6 +32,7 @@ function useForm(inputsConfig) {
     }) => (
       <InputField
         id={id}
+        key={id}
         isDisabled={isDisabled}
         type={type}
         label={label}

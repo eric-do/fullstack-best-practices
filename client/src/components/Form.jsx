@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import useForm from '~/hooks/useForm';
 
-function GenericForm({ form: { inputs, title, submit: { onSubmit } } }) {
+function GenericForm({ form: { inputs, title }, onSubmit }) {
   const { renderFormInputs, form } = useForm(inputs);
 
   const handleSubmit = (event) => {
@@ -34,6 +34,7 @@ GenericForm.defaultProps = {
     inputs: {},
     submit: {},
   },
+  onSubmit: () => {},
 };
 
 GenericForm.propTypes = {
@@ -47,10 +48,9 @@ GenericForm.propTypes = {
         type: PropTypes.string,
       }),
     ),
-    submit: PropTypes.shape({
-      onSubmit: PropTypes.func,
-    }),
+    submit: PropTypes.shape({}),
   }),
+  onSubmit: PropTypes.func,
 };
 
 export default GenericForm;

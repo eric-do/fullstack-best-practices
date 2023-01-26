@@ -18,7 +18,7 @@ function MoviesList() {
       { isPending && <div>Making request</div> }
       {
         !error && movies.map((movie) => (
-          <MovieEntry movie={movie} />
+          <MovieEntry movie={movie} key={movie} />
         ))
       }
     </div>

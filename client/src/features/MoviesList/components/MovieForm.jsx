@@ -6,10 +6,8 @@ import { movieForm } from '../utils/formConfig';
 function MovieForm() {
   const { addMovie } = useAddMovie();
 
-  movieForm.submit.onSubmit = addMovie;
-
   return (
-    <Form form={movieForm} />
+    <Form form={movieForm} onSubmit={addMovie} />
   );
 }
 
